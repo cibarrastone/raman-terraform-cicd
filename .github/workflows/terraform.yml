@@ -36,6 +36,11 @@ jobs:
         working-directory: aws
         run: terraform apply -auto-approve
 
+      - name: Terraform destroy (AWS)
+        working-directory: aws
+        run: terraform destroy -auto-approve  
+  
+
       # ---------------- AZURE ----------------
       - name: Terraform Init (Azure)
         working-directory: azure
@@ -54,6 +59,11 @@ jobs:
           ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         run: terraform apply -auto-approve
+
+      - name: Terraform destroy (azure)
+        working-directory: azure
+        run: terraform destroy -auto-approve  
+  
 
 
       
