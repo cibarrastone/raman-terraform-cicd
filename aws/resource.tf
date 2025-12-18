@@ -4,7 +4,7 @@ variable "aws_region" {
 }
 
 resource "aws_s3_bucket" "demo" {
-  bucket = "cisco-raman-terraform-ci-demo-${random_id.suffix.hex}"
+  bucket = "cissco-raman-terraform-ci-demo-${random_id.suffix.hex}"
 
   tags = {
     Project = "Terraform-CI"
